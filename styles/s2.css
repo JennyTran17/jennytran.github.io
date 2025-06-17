@@ -1,0 +1,295 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+    /* Hide vertical scrollbar */
+
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    place-content: top;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    /* Remove rounding for full screen */
+    --position: 97%;
+    width: 100vw;
+    height: 100vh;
+    /* Full height */
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    /* Full height */
+    position: relative;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image scales properly */
+    object-position: left;
+}
+
+.image-before {
+    position: absolute;
+    inset: 0;
+    width: var(--position);
+    height: 100%;
+    /* Full height */
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider:focus-visible~.slider-button {
+    outline: 5px solid black;
+    outline-offset: 3px;
+}
+
+.slider-line {
+    position: absolute;
+    inset: 0;
+    width: .1rem;
+    height: 100%;
+    /* Full height */
+    background-color: white;
+    z-index: 10;
+    left: var(--position);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.slider-button {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: 100vw;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.bottom-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s;
+    padding: 50px;
+    font-family: 'Audiowide';
+}
+
+.bottom-nav a:hover {
+    color: #fd7abb;
+    /* Highlight color */
+}
+
+.arrow {
+    border: solid rgb(249, 113, 194);
+    border-width: 0 10px 10px 0;
+    padding: 10px;
+    position: absolute;
+    transition: width 2s;
+    margin-left: -0.5%;
+    margin-top: 0.5%;
+}
+
+.down {
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.down:hover {
+    transform: rotate(45deg) scale(1.8);
+}
+
+#intro {
+    color: white;
+    text-align: justify;
+    padding: 50px 80px;
+    text-align: left;
+    font-size: 2rem;
+    font-family: 'Abel';
+}
+
+.image-gallery {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    padding: 2% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/* Ensure the link doesn't interfere with image size */
+.image-gallery .box a {
+    display: block;
+    /* Makes the link behave like a block element */
+    text-decoration: none;
+    /* Removes underline styling */
+    width: 100%;
+    /* Matches the size of the parent container */
+    height: 100%;
+}
+
+/* Ensure images maintain their size inside links */
+.image-gallery .box a img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    /* Match the size defined in your original CSS */
+    object-fit: cover;
+    transition: .5s;
+    display: block;
+    /* Ensures no inline spacing issues */
+}
+
+/* Ensure hover effects work correctly with links */
+.image-gallery .box:hover a img {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+    position: relative; /* Ensure the span text stays on top */
+}
+
+.box > a {
+    display: block; /* Ensures the link occupies the full box */
+    width: 100%;
+    height: 100%;
+    position: relative; /* Required for text layering */
+}
+
+.box > a img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: 0.5s;
+    display: block;
+    position: relative;
+    z-index: 1; /* Keep the image below the text */
+}
+
+.box > span {
+    font-family: Elianto;
+    color: white;
+    font-size: 3vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+    position: absolute; /* Layer it above the image */
+    bottom: 0; /* Position the text at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Ensure it's above the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background for readability */
+    padding: 0.5rem 1rem; /* Optional: Add padding for text */
+}
+
+.box:hover {
+    flex: 1 1 50%;
+}
+
+.box:hover > a img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 850px) {#about {margin-left: 0; padding:0;}
+
+.image-gallery {
+    display: block;
+    padding: 0;
+    height: auto;
+}
+
+}
+@media only screen and (max-width: 500px) {#about {margin-left: 0; padding:0;}
+
+.image-gallery {
+    display: block;
+    padding: 0;
+    height: auto;
+}
+.box > span{
+    position: relative;
+    font-size: 10px;
+}
+
+}

@@ -1,0 +1,204 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  color: #777;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+#achieve h2{
+  font-family: 'Caveat';
+  font-size: 3rem;
+  margin-left: 8%;
+  color: rgb(251, 159, 193)
+}
+
+#achieve{
+  color: white;
+  padding: 10px;
+}
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-1 {
+  background-image: url("../img/game6.png");
+  min-height: 100%;
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  animation: 2s slide-down;
+  animation-delay: 0s;
+}
+
+.caption span.border {
+  color: black;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  transition: transform .2s;
+}
+
+.caption .arrow {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.down:hover {
+  transform: scale(1.8);
+
+
+}
+
+h4 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: black;
+
+}
+
+.border p {
+  letter-spacing: 5px;
+  font-family: 'Qwigley';
+  font-weight: 800;
+  color: black;
+  font-size: 70px;
+}
+table th:first-child{
+color:rgb(0, 157, 255);
+}
+
+img {
+  width: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  background-color: transparent;
+}
+
+.gallery {
+  flex: 200px;
+  flex-wrap: wrap;
+  padding: 3% 10px 5% 0;
+  color: white;
+  font-size: small;
+  width: 5%;
+
+  transition: transform .2s;
+}
+
+.gallery:hover {
+  transform: scale(1.5);
+}
+
+section {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+
+@keyframes slide-right {
+  from {
+     margin-left: -500px;
+  }
+
+  to {
+     margin-left: 0%;
+  }
+}
+
+
+
+@keyframes slide-down {
+  from {
+     margin-top: -300px;
+  }
+
+  to {
+     margin-top: 0%;
+  }
+}
+
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 100%; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #ff79d5;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 40px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  position: fixed;
+}
+
+.openbtn:hover {
+  background-color: #fea9dc5f;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+}

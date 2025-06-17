@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/s2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Tourney:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="image-container">
+                <picture>
+                    <source srcset="img/print6.png" media="(max-width: 400px)">
+                    <!-- Image for small screens -->
+                    <source srcset="img/print4.png" media="(max-width: 740px)">
+                    <!-- Image for medium screens -->
+                    <source srcset="img/print9.png" media="(max-width: 947px)">
+                    <source srcset="img/print11.png" media="(max-width: 1300px)">
+                    <!-- Default image for large screens -->
+                    <img class="image-before slider-image" src="img/print3.png" alt="before image" />
+                </picture>
+                <picture>
+                    <source srcset="img/print7.png" media="(max-width: 400px)">
+                    <source srcset="img/print5.png" media="(max-width: 740px)">
+                    <source srcset="img/print8.png" media="(max-width: 947px)">
+                    <source srcset="img/print10.png" media="(max-width: 1300px)">
+                    <img class="image-after slider-image" src="img/print2.png" alt="after image" />
+                </picture>
+            </div>
+
+            <input type="range" min="0" max="100" value="50" class="slider" aria-label="photo before shown" />
+            <div class="slider-line"></div>
+            <div class="slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                </svg>
+            </div>
+        </div>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <!-- <li><a href="#intro">Discover</a></li>-->
+            <a href="#intro" id="scroll"><i class="arrow down"></i></a>
+        </ul>
+    </nav>
+
+    <div id="intro" class="content" style="margin-top:9%;">
+        <div class="w3-half">
+            <img src="img/abtme.png" style="width: 60%; margin-left: 10%;" />
+        </div>
+        <div class="w3-half">
+            <p style="text-align: left; font-size: 1.5rem;">
+                I started my journey in software design and development, diving into the world of game creation and 3D
+                modeling.
+                Along the way, I became fascinated by how technology and creativity intertwine, especially with the
+                potential of artificial intelligence.
+                It’s now my mission to craft innovative solutions and immersive experiences that showcase the endless
+                possibilities of tech.<br>
+            </p>
+        </div>
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" style="margin-top: 20%;" id="about">
+            <h2 class="w3-text-light-grey" style="font-family: 'Caveat'; font-size: 3rem;">My Qualities</h2>
+            <p>
+            <ul style="font-size: 1.5rem; color: rgb(162, 162, 162);">
+                <li>Responsible and self-assured individual.</li><br>
+                <li>Strong communication skills.</li><br>
+                <li>Dedicated to achieving tangible results and fostering cooperation, quick
+                    learner,
+                    proactive, and excited to collaborate.</li><br>
+                <li>Capable of working with clients to determine requirements and provide excellent service.</li><br>
+                <li>Detail-oriented and meticulous decision-maker, adept at managing orders, and work life balance</li>
+                <br>
+                <li>Flexible with work shift hours</li><br>
+                <li>Highly engaged in computer-related activities, particularly coding</li>
+            </ul>
+            </p>
+
+            <h3 class="w3-padding-16 w3-text-light-grey"
+                style="font-family: 'Caveat'; font-size: 3rem; margin-top: 15%;">My Skills</h3>
+            <p class="w3-wide">Software Development</p>
+            <div class="w3-white">
+                <div style="height:25px;width:85%; background-color: rgb(255, 152, 205);"></div>
+            </div>
+            <p class="w3-wide">Web Design</p>
+            <div class="w3-white">
+                <div style="height:25px;width:70%; background-color: rgb(255, 152, 205);;"></div>
+            </div>
+            <p class="w3-wide">Game Development</p>
+            <div class="w3-white">
+                <div style="height:25px;width:95%;  background-color: rgb(255, 152, 205);;"></div>
+            </div>
+
+            <p class="w3-wide">Soft Skills</p>
+            <div class="w3-white">
+                <div style="height:25px;width:80%; background-color: rgb(255, 152, 205);"></div>
+            </div><br>
+
+            <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">3+</span><br>
+                    Languages
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">10+</span><br>
+                    Projects Done
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">5+</span><br>
+                    Work Experience
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">20+</span><br>
+                    Achievements
+                </div>
+
+            </div>
+
+            <button class="w3-button w3-light-grey w3-padding-medium w3-section"><a href="/img/HuongTranCV.pdf"
+                    download="HuongTran_CV.pdf" style="text-decoration: none; color: black;">
+                    <i class="fa fa-download"></i> Download Resume</a>
+            </button>
+
+
+            <!-- Testimonials -->
+            <h3 class="w3-padding-24 w3-text-light-grey"
+                style="margin-top: 15%;font-family: 'Caveat'; font-size: 3rem;">References</h3>
+            <a href="https://ie.linkedin.com/in/eoin-mcloughlin-65512332" style="text-decoration: none;"><i
+                    class="fa fa-linkedin w3-hover-opacity w3-left w3-circle w3-margin-right w3-padding"></i></a>
+            <p>Endorsed by Eoin McLoughlin</p>
+            <p>Lecturer of Athlone Institute of Technology in TUS</p><br>
+
+            <!-- End About Section -->
+        </div>
+
+        <div style="margin-top: 2%;">
+
+            <div style="color:#ddd;background-color:#000000;text-align:center;padding:50px 80px;text-align: justify;">
+
+                <div class="image-gallery">
+                    <div class="box">
+                        <a href="education.html">
+                            <img src="img/education.jpg"></a>
+                        <span style="font-family: Abel;">EDUCATION</span>
+                    </div>
+                    <div class="box">
+                        <a href="experience.html">
+                            <img src="img/work.jpg"></a>
+                        <span style="font-family: Abel;">EXPERIENCE</span>
+                    </div>
+                    <div class="box">
+                        <a href="mywork.html">
+                            <img src="img/goal.jpg"></a>
+                        <span style="font-family: Abel;">PROJECTS</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+            <h2 class="w3-text-light-grey" style="font-family: 'Caveat'; font-size: 3rem;">Contact Me</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <div class="w3-section">
+                <p><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right" style="color: rgb(255, 114, 192);"></i>
+                    Athlone, Republic of
+                    Ireland</p>
+                <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right" style="color: rgb(255, 114, 192);"></i> Phone:
+                    +353 894755264</p>
+                <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right" style="color: rgb(255, 114, 192);"> </i>
+                    Email:
+                    teacupjt17@mail.com
+                </p>
+            </div><br>
+            <p style="font-family: 'Caveat'; font-size: 2rem; color: rgb(255, 114, 192) ;">Let's get in touch. Send me a
+                message:</p>
+
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding" type="text" placeholder="Name" required name="Name"
+                        style="font-size: 1.7rem;"></p>
+                <p><input class="w3-input w3-padding" type="text" placeholder="Email" required name="Email"
+                        style="font-size: 1.7rem;"></p>
+                <p><input class="w3-input w3-padding" type="text" placeholder="Subject" required name="Subject"
+                        style="font-size: 1.7rem;"></p>
+                <p><input class="w3-input w3-padding" type="text" placeholder="Message" required name="Message"
+                        style="font-size: 1.7rem;"></p>
+                <p>
+                    <button class="w3-button w3-light-grey w3-padding-medium" type="submit" style="margin-top: 3%;"><a
+                            href="mailto:teacupjt17@gmail.com" style="text-decoration: none; color: black;">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE</a>
+                    </button>
+                </p>
+            </form>
+            <!-- End Contact Section -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+            <p>Social Media: <a href="https://www.linkedin.com/in/huong-jenny-tran-613169203/" style="text-decoration: none;"><i
+                class="fa fa-linkedin w3-hover-opacity"></i></a></p>
+            <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i> -->
+            
+
+            <!-- End footer -->
+        </footer>
+
+        <!-- END PAGE CONTENT -->
+    </div>
+
+</body>
+
+</html>
