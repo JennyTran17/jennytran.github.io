@@ -167,3 +167,9 @@ body{
   .openbtn:hover {
     background-color: #fea9dc5f;
   }
+
+  @media only screen and (max-width: 850px) {
+.openbtn{
+    font-size: 20px;
+}
+  }

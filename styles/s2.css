@@ -277,6 +277,7 @@ main {
     display: block;
     padding: 0;
     height: auto;
+   
 }
 
 }
@@ -286,10 +287,26 @@ main {
     display: block;
     padding: 0;
     height: auto;
+    width: 100%;
+   
 }
 .box > span{
     position: relative;
     font-size: 10px;
+     width: 100%;
+}
+
+.outer_gallery{
+    padding:0;
+}
+
+#contact{
+    font-size: 20px;
+}
+
+#about{
+    display:block;
+    font-size: 20px;
 }
 
 }
